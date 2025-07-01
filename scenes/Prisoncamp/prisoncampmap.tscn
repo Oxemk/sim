@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnsfirr3wcdjy"]
+
+[ext_resource type="PackedScene" uid="uid://cljkjxd1r4e0y" path="res://scenes/Tiles/tile.tscn" id="1_diur6"]
+[ext_resource type="Script" uid="uid://otxsf0m60tdu" path="res://scenes/WORLDMAP.gd" id="1_rka2o"]
+[ext_resource type="PackedScene" uid="uid://b2nr47rmffp72" path="res://scenes/Player.tscn" id="2_diur6"]
+[ext_resource type="PackedScene" uid="uid://w1u6tgxiup72" path="res://UI/UIMANAGER.tscn" id="4_sq2ls"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ccdu0"]
+
+[sub_resource type="Environment" id="Environment_diur6"]
+
+[node name="Prisoncampmap" type="Node3D"]
+script = ExtResource("1_rka2o")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ccdu0")
+
+[node name="SpawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.41165)
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_diur6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.99051, -0.137444, -2.65794e-08, -0.0417877, 0.301148, 0.952661, -0.130938, 0.94362, -0.304033, 1.28482, 6.45515, 0.137472)
+
+[node name="TileMap" type="Node3D" parent="."]
+
+[node name="Prisontile_yard" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Prisontile_yard2" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -1.08749)
+
+[node name="Prisontile_workshop" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.948115, 0, -0.555395)
+
+[node name="Prisontile_tamerspen" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.942198, 0, -0.538288)
+
+[node name="Prisontile_medbay" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 1.08939)
+
+[node name="Prisontile_barricks" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.948115, 0, -1.64873)
+
+[node name="Prisontile7" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.942198, 0, -1.63162)
+
+[node name="Prisontile_barricks2" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.948115, 0, -2.7395)
+
+[node name="Prisontile8" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.942198, 0, -2.72239)
+
+[node name="Prisontile_exit" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -4.35071)
+enter_scene = "res://scenes/WorldMap.tscn"
+
+[node name="Prisontile_Gate" parent="TileMap" instance=ExtResource("1_diur6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -3.26425)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.383699, 0.923458, 0, -0.923458, -0.383699, -0.00953364, 2.23537, -0.00740933)
+
+[node name="UIManager" parent="." instance=ExtResource("4_sq2ls")]
+
+[node name="Player" parent="." instance=ExtResource("2_diur6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.200961, 0)

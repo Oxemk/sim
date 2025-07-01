@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://w1u6tgxiup72"]
+
+[ext_resource type="Script" uid="uid://cw1r5mk7rwhfh" path="res://scripts/manager/UIManager.gd" id="1_fwh8p"]
+[ext_resource type="PackedScene" uid="uid://buifhjcnesgs4" path="res://scripts/char/panals/StatAllocationPanel.tscn" id="2_46xl4"]
+[ext_resource type="PackedScene" uid="uid://c6htrfc7w1lbv" path="res://scripts/char/panals/CharacterSheet.tscn" id="2_lf2lb"]
+[ext_resource type="PackedScene" uid="uid://bw34jniouo5o1" path="res://scripts/char/panals/InventoryPanel.tscn" id="2_locdw"]
+[ext_resource type="PackedScene" uid="uid://byl7txsee5fuf" path="res://scripts/char/panals/RankUpPanel.tscn" id="2_yge27"]
+[ext_resource type="PackedScene" uid="uid://ekn0mmil2dv0" path="res://UI/TileInfoPanel.tscn" id="4_46xl4"]
+[ext_resource type="PackedScene" uid="uid://ckangql05k1jp" path="res://UI/SkillShop.tscn" id="5_46xl4"]
+
+[node name="Uimanager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwh8p")
+
+[node name="CharacterSheet" parent="." instance=ExtResource("2_lf2lb")]
+layout_mode = 1
+
+[node name="SkillPathUI" parent="." instance=ExtResource("2_46xl4")]
+layout_mode = 1
+offset_left = 141.0
+offset_top = 284.0
+offset_right = -747.0
+offset_bottom = -143.0
+
+[node name="RankUpPanel" parent="." instance=ExtResource("2_yge27")]
+layout_mode = 1
+offset_left = 401.0
+offset_top = 1.0
+offset_right = -613.0
+offset_bottom = -553.0
+
+[node name="InventoryPanel" parent="." instance=ExtResource("2_locdw")]
+layout_mode = 1
+offset_left = 199.0
+offset_top = 25.0
+offset_right = -790.0
+offset_bottom = -422.0
+
+[node name="SkillShopPanel" parent="." instance=ExtResource("5_46xl4")]
+layout_mode = 1
+offset_left = 512.0
+offset_top = 64.0
+offset_right = -493.0
+offset_bottom = -335.0
+
+[node name="TileInfoPanel" parent="." instance=ExtResource("4_46xl4")]
+layout_mode = 1
+offset_left = 940.0
+offset_top = 46.0
+offset_right = -12.0
+offset_bottom = -297.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 503.0
+offset_right = 1140.0
+offset_bottom = 40.0
+
+[node name="MapButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Map"
+
+[node name="TileInfoButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "TileInfo"
+
+[node name="CharacterButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Character"
+
+[node name="InventoryButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="RankUpButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Rankup"
+
+[node name="StatTreeButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "SkillPath"
+
+[node name="SkillShopButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "SkillShop"
+
+[node name="SettingsButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[connection signal="pressed" from="HBoxContainer/MapButton" to="." method="_on_map_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/TileInfoButton" to="." method="_on_tile_info_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/CharacterButton" to="." method="_on_character_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/InventoryButton" to="." method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/RankUpButton" to="." method="_on_rank_up_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/StatTreeButton" to="." method="_on_stat_tree_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/SkillShopButton" to="." method="_on_skill_shop_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]

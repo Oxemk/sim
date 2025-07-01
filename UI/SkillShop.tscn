@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckangql05k1jp"]
+
+[ext_resource type="Script" uid="uid://cgpt3vvuwm6r6" path="res://scripts/SkillShop.gd" id="1_mqs2f"]
+
+[node name="SkillShop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mqs2f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Skill Shop"
+
+[node name="DescriptionLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="UnlockButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Unlock"
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="SkillList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="PackList" type="ItemList" parent="VBoxContainer/ScrollContainer2"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2

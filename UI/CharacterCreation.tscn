@@ -1,0 +1,212 @@
+[gd_scene load_steps=2 format=3 uid="uid://de8ae0k7srma3"]
+
+[ext_resource type="Script" uid="uid://cggicjbd240qa" path="res://scripts/CharacterCreation.gd" id="1_rvu8t"]
+
+[node name="CharacterCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rvu8t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 19.0
+offset_right = 416.0
+offset_bottom = 163.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Creation"
+
+[node name="NameInput" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "character name"
+
+[node name="RaceSelect" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="PackSelector" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="PackPreview" type="VBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="CreateButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Create"
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StatBox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 31.0
+offset_right = 610.0
+offset_bottom = 334.0
+scale = Vector2(1.52299, 1.52299)
+
+[node name="EnduranceBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="endurance" type="Label" parent="StatBox/EnduranceBox"]
+layout_mode = 2
+text = "endurance"
+
+[node name="Value" type="Label" parent="StatBox/EnduranceBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/EnduranceBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/EnduranceBox"]
+layout_mode = 2
+text = "-"
+
+[node name="AdaptabilityBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="adaptability" type="Label" parent="StatBox/AdaptabilityBox"]
+layout_mode = 2
+text = "adaptability"
+
+[node name="Value" type="Label" parent="StatBox/AdaptabilityBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/AdaptabilityBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/AdaptabilityBox"]
+layout_mode = 2
+text = "-"
+
+[node name="StrengthBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="Strength" type="Label" parent="StatBox/StrengthBox"]
+layout_mode = 2
+text = "Strength"
+
+[node name="Value" type="Label" parent="StatBox/StrengthBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/StrengthBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/StrengthBox"]
+layout_mode = 2
+text = "-"
+
+[node name="DexterityBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="dexterity" type="Label" parent="StatBox/DexterityBox"]
+layout_mode = 2
+text = "dexterity"
+
+[node name="Value" type="Label" parent="StatBox/DexterityBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/DexterityBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/DexterityBox"]
+layout_mode = 2
+text = "-"
+
+[node name="IntellectBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="intellect" type="Label" parent="StatBox/IntellectBox"]
+layout_mode = 2
+text = "intellect"
+
+[node name="Value" type="Label" parent="StatBox/IntellectBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/IntellectBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/IntellectBox"]
+layout_mode = 2
+text = "-"
+
+[node name="SpiritBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="spirit" type="Label" parent="StatBox/SpiritBox"]
+layout_mode = 2
+text = "Spirit"
+
+[node name="Value" type="Label" parent="StatBox/SpiritBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/SpiritBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/SpiritBox"]
+layout_mode = 2
+text = "-"
+
+[node name="CharismaBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="charisma" type="Label" parent="StatBox/CharismaBox"]
+layout_mode = 2
+text = "charisma"
+
+[node name="Value" type="Label" parent="StatBox/CharismaBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/CharismaBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/CharismaBox"]
+layout_mode = 2
+text = "-"
+
+[node name="LuckBox" type="HBoxContainer" parent="StatBox"]
+layout_mode = 2
+
+[node name="luck" type="Label" parent="StatBox/LuckBox"]
+layout_mode = 2
+text = "luck"
+
+[node name="Value" type="Label" parent="StatBox/LuckBox"]
+layout_mode = 2
+
+[node name="PlusButton" type="Button" parent="StatBox/LuckBox"]
+layout_mode = 2
+text = "+"
+
+[node name="MinusButton" type="Button" parent="StatBox/LuckBox"]
+layout_mode = 2
+text = "-"
+
+[node name="RemainingLabel" type="Label" parent="StatBox"]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="Label" type="Label" parent="StatBox/RemainingLabel"]
+layout_mode = 2
+offset_left = 26.0
+offset_top = -2.0
+offset_right = 164.0
+offset_bottom = 21.0
+text = "statponts"
+
+[connection signal="pressed" from="VBoxContainer/CreateButton" to="." method="_on_create_button_pressed"]

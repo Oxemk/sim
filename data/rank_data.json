@@ -1,0 +1,17 @@
+[
+  { "rank":"f", "xp_required":100, "stat_cap":10 },
+  { "rank":"D-", "xp_required":200, "stat_cap":15 },
+  { "rank":"D",  "xp_required":300, "stat_cap":20 },
+  { "rank":"D+","xp_required":300, "stat_cap":20 },
+  { "rank":"C-","xp_required":400, "stat_cap":25 },
+  { "rank":"C", "xp_required":500, "stat_cap":30 },
+  { "rank":"C+","xp_required":600, "stat_cap":35 },
+  { "rank":"B-","xp_required":750, "stat_cap":40 },
+  { "rank":"B", "xp_required":900, "stat_cap":45 },
+  { "rank":"B+","xp_required":1100,"stat_cap":50 },
+  { "rank":"A-","xp_required":1350,"stat_cap":55 },
+  { "rank":"A", "xp_required":1600,"stat_cap":60 },
+  { "rank":"A+","xp_required":1900,"stat_cap":65 },
+  { "rank":"S", "xp_required":2300,"stat_cap":70 },
+  { "rank":"S+","xp_required":3000,"stat_cap":75 }
+]

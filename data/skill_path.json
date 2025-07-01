@@ -1,0 +1,80 @@
+[
+  {
+	"id": "survivor_field_medic_1",
+	"name": "Field Aid",
+	"description": "Basic healing and field stabilization.",
+	"path": "survivor",
+	"branch": "field_medic",
+	"tier": 1,
+	"required_xp": 200,
+	"xp_type": "survivor",
+	"requirements": [],
+	"stat_bonuses": {"spirit": 1, "endurance": 1},
+	"unlocks": ["basic_heal", "bleed_stop"]
+  },
+  {
+	"id": "hunter_tracker_1",
+	"name": "Track Prints",
+	"description": "Detect creature trails and footprints.",
+	"path": "hunter",
+	"branch": "tracker",
+	"tier": 1,
+	"required_xp": 300,
+	"xp_type": "hunter",
+	"requirements": [],
+	"stat_bonuses": {"dexterity": 1},
+	"unlocks": ["track_creatures"]
+  },
+  {
+	"id": "tamer_beast_affinity_1",
+	"name": "Tame Wild",
+	"description": "Basic wild creature taming.",
+	"path": "tamer",
+	"branch": "beast_affinity",
+	"tier": 1,
+	"required_xp": 350,
+	"xp_type": "tamer",
+	"requirements": [],
+	"stat_bonuses": {"charisma": 2},
+	"unlocks": ["tame_creature"]
+  },
+  {
+	"id": "mystic_weather_weaver_1",
+	"name": "Wind Whisperer",
+	"description": "Influence minor weather around you.",
+	"path": "mystic",
+	"branch": "weather_weaver",
+	"tier": 1,
+	"required_xp": 250,
+	"xp_type": "mystic",
+	"requirements": [],
+	"stat_bonuses": {"spirit": 2},
+	"unlocks": ["wind_gust"]
+  },
+  {
+	"id": "breaker_demolitionist_1",
+	"name": "Weakpoint Knowledge",
+	"description": "Recognize and exploit structure weak points.",
+	"path": "breaker",
+	"branch": "demolitionist",
+	"tier": 1,
+	"required_xp": 300,
+	"xp_type": "breaker",
+	"requirements": [],
+	"stat_bonuses": {"strength": 1, "intellect": 1},
+	"unlocks": ["sabotage"]
+  },
+  {
+	"id": "arcanist_codecaster_1",
+	"name": "Binary Pulse",
+	"description": "Overload low-level AI systems.",
+	"path": "arcanist",
+	"branch": "codecaster",
+	"tier": 1,
+	"required_xp": 400,
+	"xp_type": "arcanist",
+	"requirements": [],
+	"stat_bonuses": {"intellect": 2},
+	"unlocks": ["ai_jam"]
+  }
+]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cktgg5kdab21u"]
+
+[ext_resource type="Script" uid="uid://sa6lh5vmy58" path="res://scripts/CharacterSelection.gd" id="1_2hy64"]
+
+[node name="CharacterSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2hy64")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Select Your Character"
+
+[node name="CharacterList" type="ItemList" parent="VBoxContainer"]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 2
+
+[node name="SelectButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Select"
+
+[node name="CreateButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Create"
+
+[node name="DeleteButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Delete"
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/SelectButton" to="." method="_on_select_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreateButton" to="." method="_on_create_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/DeleteButton" to="." method="_on_create_button_pressed"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://byl7txsee5fuf"]
+
+[ext_resource type="Script" uid="uid://ckpbcggthsull" path="res://scripts/char/panals/RankUpPanel.gd" id="1_45we1"]
+
+[node name="RankUpPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_45we1")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CurrentRankLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="NextRankLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="XPLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Confirm"
+
+[node name="closeButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "close"

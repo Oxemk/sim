@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://x7ljoqw0pk1s"]
+
+[ext_resource type="Script" uid="uid://c81837pgpc8ny" path="res://scripts/login_screen.gd" id="1_7ra11"]
+
+[node name="LoginScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ra11")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 0
+offset_left = 276.0
+offset_top = 198.0
+offset_right = 776.0
+offset_bottom = 388.0
+scale = Vector2(1.36, 1.36)
+alignment = 1
+
+[node name="login" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "LOGIN"
+horizontal_alignment = 1
+
+[node name="Username" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "USERNAME"
+
+[node name="Password" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+placeholder_text = "PASSWORD"
+
+[node name="LoginButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Login"
+
+[node name="RegisterButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Register"
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "demo"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RegisterButton" to="." method="_on_register_button_pressed"]

@@ -1,0 +1,11 @@
+{
+  "prison_intro": {"title":"Arrival","description":"You awaken in the depths of a slave prison...","next_steps":["prison_labor"]},
+  "prison_labor": {"title":"Forced Labor","description":"Assigned to yard duty.","objectives":["Complete 1 combat tile"],"next_steps":["stealth_training"]},
+  "stealth_training": {"title":"Stealth Training","description":"Complete stealth tests.","objectives":["Complete 2 stealth tiles"],"next_steps":["medical_visit"]},
+  "medical_visit": {"title":"The Medbay","description":"You’re taken to the medbay.","next_steps":["workshop_intro"]},
+  "workshop_intro": {"title":"Workshop","description":"Learn to craft basic gear.","objectives":["Craft an item"],"next_steps":["tamer_pen"]},
+  "tamer_pen": {"title":"Tamer's Pen","description":"Test captive beasts.","objectives":["Complete taming minigame"],"next_steps":["gate_escape"]},
+  "gate_escape": {"title":"The Gate","description":"Fight or sneak to freedom.","objectives":["Choose combat or stealth"],"next_steps":["surface_arrival"]},
+  "surface_arrival": {"title":"Surface Arrival","description":"You emerge into freedom.","next_steps":["starting_town"]},
+  "starting_town": {"title":"Starting Town","description":"Decide your path.","next_steps":[]}
+}

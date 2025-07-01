@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn0q71tv56p1q"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5hgjn1e53ej1" path="res://scenes/hexagon.obj" id="1_51qqw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l3gls"]
+height = 2.502
+
+[node name="Blanktile" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.616605, 0, 0, 0, 0.616605, 0, 0, 0, 0.616605, 0, 1.86265e-09, 0)
+mesh = ExtResource("1_51qqw")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.14517, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("CylinderShape3D_l3gls")

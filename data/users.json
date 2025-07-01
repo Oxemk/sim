@@ -1,0 +1,19 @@
+{
+	"users": [
+		{
+			"characters": [],
+			"password": "adminpass",
+			"username": "admin"
+		},
+		{
+			"characters": [],
+			"password": "1234",
+			"username": "tester"
+		},
+		{
+			"characters": [],
+			"password": "SAC",
+			"username": "SAC"
+		}
+	]
+}

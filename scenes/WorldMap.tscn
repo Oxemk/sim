@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://pufw0wtllqif"]
+
+[ext_resource type="Script" uid="uid://otxsf0m60tdu" path="res://scenes/WORLDMAP.gd" id="1_jsexe"]
+[ext_resource type="PackedScene" uid="uid://cpeubj1dmjo6s" path="res://scenes/Tiles/Towntile.tscn" id="2_05f3n"]
+[ext_resource type="PackedScene" uid="uid://drujfha5nda66" path="res://scenes/Tiles/wildtile.tscn" id="3_dpebi"]
+[ext_resource type="PackedScene" uid="uid://cljkjxd1r4e0y" path="res://scenes/Tiles/tile.tscn" id="4_qqown"]
+[ext_resource type="PackedScene" uid="uid://w1u6tgxiup72" path="res://UI/UIMANAGER.tscn" id="6_1d6c4"]
+[ext_resource type="PackedScene" uid="uid://b2nr47rmffp72" path="res://scenes/Player.tscn" id="6_jsexe"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ccdu0"]
+
+[sub_resource type="Environment" id="Environment_diur6"]
+
+[node name="WorldMap" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.20674, 0)
+script = ExtResource("1_jsexe")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ccdu0")
+
+[node name="SpawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.175568, 0)
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_diur6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.99051, -0.137444, -2.65794e-08, -0.0417877, 0.301148, 0.952661, -0.130938, 0.94362, -0.304033, 1.28482, 6.45515, 0.137472)
+
+[node name="TileMap" type="Node3D" parent="."]
+
+[node name="Prisontile" parent="TileMap" instance=ExtResource("4_qqown")]
+enter_scene = "res://scenes/Prisoncamp/prisoncampmap2.tscn"
+
+[node name="TownFridertile" parent="TileMap" instance=ExtResource("2_05f3n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -1.06509)
+
+[node name="TownFridertile2" parent="TileMap" instance=ExtResource("2_05f3n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 1.06939)
+
+[node name="TownFridertile3" parent="TileMap" instance=ExtResource("2_05f3n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.925567, 0, -0.53402)
+
+[node name="TownFridertile4" parent="TileMap" instance=ExtResource("2_05f3n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.925567, 0, 0.532581)
+
+[node name="TownFridertile5" parent="TileMap" instance=ExtResource("2_05f3n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.923751, 0, -0.53402)
+
+[node name="TownFridertile6" parent="TileMap" instance=ExtResource("2_05f3n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.923751, 0, 0.532581)
+
+[node name="plainstile" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -2.12893)
+
+[node name="plainstile2" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 2.12332)
+
+[node name="plainstile3" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.929959, 0, 1.59504)
+
+[node name="plainstile4" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.927832, 0, 1.59504)
+
+[node name="plainstile5" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.929959, 0, -1.59488)
+
+[node name="plainstile6" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.927832, 0, -1.59488)
+
+[node name="worldtile" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.84835, 1.19209e-07, -1.05809)
+
+[node name="worldtile2" parent="TileMap" instance=ExtResource("3_dpebi")]
+transform = Transform3D(-4.37114e-08, 0, 1, -0.0113618, 0.999935, -4.96642e-10, -0.999935, -0.0113618, -4.37086e-08, -1.84835, 0, -0.0152733)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.383699, 0.923458, 0, -0.923458, -0.383699, -0.00953364, 2.23537, -0.00740933)
+
+[node name="UIManager" parent="." instance=ExtResource("6_1d6c4")]
+
+[node name="Player" parent="." instance=ExtResource("6_jsexe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.207275, 0)

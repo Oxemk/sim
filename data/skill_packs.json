@@ -1,0 +1,91 @@
+{
+  "creation_packs": {
+	"hand_to_hand": {
+	  "name": "Hand-to-Hand",
+	  "description": "Brutal close-range brawling. Simple and reliable.",
+	  "icon": "res://icons/hand_to_hand.png",
+	  "cost": 1000,
+	  "currency": "XP",
+	  "skills": [
+		"punch",
+		"block",
+		"dodge",
+		"uppercut",
+		"counter",
+		"grab",
+		"elbow_strike",
+		"kneebash",
+		"headbutt",
+		"spinning_kick"
+	  ]
+	},
+	"stealth_fighter": {
+	  "name": "Stealth Fighter",
+	  "description": "Fade from sight and strike from the shadows.",
+	  "icon": "res://icons/stealth.png",
+	  "cost": 1000,
+	  "currency": "XP",
+	  "skills": [
+		"vanish",
+		"stab",
+		"evade",
+		"backstab",
+		"silent_step",
+		"shadow_walk",
+		"assassinate",
+		"disarm_trap",
+		"poison_edge",
+		"cloak_loot"
+	  ]
+	},
+	"ranger": {
+	  "name": "Ranger",
+	  "description": "Mid-range evasion and precision tactics.",
+	  "icon": "res://icons/ranger.png",
+	  "cost": 1000,
+	  "currency": "XP",
+	  "skills": [
+		"rock_throw",
+		"roll",
+		"block",
+		"aimed_shot",
+		"quick_shot",
+		"trap_place",
+		"net_throw",
+		"eagle_eye",
+		"soil_detection",
+		"camouflage"
+	  ]
+	}
+  },
+  "shop_packs": {
+	"standard": [
+	  {
+		"id": "warrior_might",
+		"name": "Warrior’s Might",
+		"description": "Melee focus",
+		"skills": ["Fist Strike", "Infernal Slash"],
+		"currency": "XP",
+		"cost": 1000
+	  },
+	  {
+		"id": "arcane_instinct",
+		"name": "Arcane Instinct",
+		"description": "Magic focus",
+		"skills": ["Radiant Pulse", "Ember Roar"],
+		"currency": "XP",
+		"cost": 1000
+	  }
+	],
+	"premium": [
+	  {
+		"id": "void_awakening",
+		"name": "Void Awakening",
+		"description": "Dark arts",
+		"skills": ["Decay Touch", "Nanite Surge"],
+		"currency": "Coins",
+		"cost": 1000
+	  }
+	]
+  }
+}
